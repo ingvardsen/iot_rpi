@@ -21,16 +21,16 @@ Links
   * [PWM / pigpio](https://dev.to/mnishiguchi/elixir-nerves-pulse-width-modulation-pwm-for-led-mj2)
   * [Provisioning](https://embedded-elixir.com/post/2018-06-15-serial_number/)
   * [Circuits](https://elixir-circuits.github.io)
+  * [Pigpio, Phoenix, GenServer](https://tomhaines.uk/blog/simple-iot-with-elixir/)
+  * [ULN2003](https://www.peterullrich.com/rotate-a-flag-with-nerves)  
+  * [Sonos volume](https://dockyard.com/blog/2020/09/08/creating-a-sonos-volumeknob-with-elixir-the-beam-and-liveview)  
 
-Pigpio, Phoenix, GenServer https://tomhaines.uk/blog/simple-iot-with-elixir/   
-ULN2003 https://www.peterullrich.com/rotate-a-flag-with-nerves  
-Sonos volume https://dockyard.com/blog/2020/09/08/creating-a-sonos-volumeknob-with-elixir-the-beam-and-liveview  
 
-Special
-i2c https://blog.mnishiguchi.com/iot-development-using-raspberry-pi-elixir-and-nerves  
-QT kiosk https://elixirforum.com/t/usb-touch-screen-with-nerves-kiosk/29996  
-DS18B20 https://github.com/developerworks/hello_celsius_sensor/blob/master/lib/hello_celsius.ex  
-Birdhouse https://dasky.xyz/posts/2020/08/12/an-iot-birdhouse-with-elixir-nerves-phoenix-liveview-components/  
+More links
+  * [i2c](https://blog.mnishiguchi.com/iot-development-using-raspberry-pi-elixir-and-nerves)
+  * [QT kiosk](https://elixirforum.com/t/usb-touch-screen-with-nerves-kiosk/29996)
+  * [DS18B20](https://github.com/developerworks/hello_celsius_sensor/blob/master/lib/hello_celsius.ex)
+  * [Birdhouse](https://dasky.xyz/posts/2020/08/12/an-iot-birdhouse-with-elixir-nerves-phoenix-liveview-components/)
 
 
 
