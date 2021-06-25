@@ -32,4 +32,4 @@ else
   import_config "target.exs"
 end
 
-config :nerves_leds, names: [green: "led0"]
+config :nerves_leds, names: [green: "led0", red: "led1"]

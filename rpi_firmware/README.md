@@ -1,10 +1,14 @@
-# RpiFirmware
+# Rpi Firmware
 
 
+Investigating Nerves on a RPI3. No USB 
 
-## 
+
 ```sh
-
+export MIX_TARGET=rpi3
+export MIX_ENV=dev
+export NERVES_NETWORK_SSID=your_wifi_name
+export NERVES_NETWORK_PSK=your_wifi_password
 
 # shutting down
 Nerves.Runtime.halt()
@@ -16,6 +20,7 @@ Links
   * [Runtime](https://hexdocs.pm/nerves_runtime/readme.html#device-reboot-and-shutdown)
   * [PWM / pigpio](https://dev.to/mnishiguchi/elixir-nerves-pulse-width-modulation-pwm-for-led-mj2)
   * [Provisioning](https://embedded-elixir.com/post/2018-06-15-serial_number/)
+  * [Circuits](https://elixir-circuits.github.io)
 
 Pigpio, Phoenix, GenServer https://tomhaines.uk/blog/simple-iot-with-elixir/   
 ULN2003 https://www.peterullrich.com/rotate-a-flag-with-nerves  
@@ -29,7 +34,7 @@ Birdhouse https://dasky.xyz/posts/2020/08/12/an-iot-birdhouse-with-elixir-nerves
 
 
 
-## Targets
+## Targets -- initiating project
 
 Nerves applications produce images for hardware targets based on the
 `MIX_TARGET` environment variable. If `MIX_TARGET` is unset, `mix` builds an
