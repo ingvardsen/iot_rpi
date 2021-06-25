@@ -5,6 +5,22 @@
 # is restricted to this project.
 import Config
 
+
+# When we deploy to a device, we use the "prod" configuration:
+import_config "../../rpi_ui/config/config.exs"
+import_config "../../rpi_ui/config/prod.exs"
+
+config :rpi_ui, RpiUiWeb.Endpoint,
+  # Nerves root filesystem is read-only, so disable the code reloader
+  code_reloader: false,
+  http: [port: 80],
+  # Use compile-time Mix config instead of runtime environment variables
+  load_from_system_env: false,
+  # Start the server since we're running in a release instead of through `mix`
+  server: true,
+  url: [host: "nerves.local", port: 80]
+
+
 # Enable the Nerves integration with Mix
 Application.start(:nerves_bootstrap)
 
