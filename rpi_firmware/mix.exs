@@ -32,6 +32,8 @@ defmodule RpiFirmware.MixProject do
     [
       # Dependencies for all targets
       # {:nerves_firmware_ssh, "~> 0.3", targets: @all_targets},
+      {:nerves_leds, "~> 0.8", targets: @all_targets},
+      {:circuits_gpio, "~> 0.4", targets: @all_targets},
       {:nerves, "~> 1.7.0", runtime: false},
       {:shoehorn, "~> 0.7.0"},
       {:ring_logger, "~> 0.8.1"},

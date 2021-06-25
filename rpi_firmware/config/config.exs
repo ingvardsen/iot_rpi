@@ -31,3 +31,5 @@ if Mix.target() == :host or Mix.target() == :"" do
 else
   import_config "target.exs"
 end
+
+config :nerves_leds, names: [green: "led0"]

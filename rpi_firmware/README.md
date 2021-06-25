@@ -1,6 +1,23 @@
 # RpiFirmware
 
-**TODO: Add description**
+
+
+## 
+```sh
+
+
+# shutting down
+Nerves.Runtime.halt()
+Nerves.Runtime.revert
+```
+
+
+Links
+  * [Runtime](https://hexdocs.pm/nerves_runtime/readme.html#device-reboot-and-shutdown)
+  * [PWM / pigpio](https://dev.to/mnishiguchi/elixir-nerves-pulse-width-modulation-pwm-for-led-mj2)
+  * [Provisioning](https://embedded-elixir.com/post/2018-06-15-serial_number/)
+
+
 
 ## Targets
 
