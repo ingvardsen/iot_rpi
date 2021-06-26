@@ -1,7 +1,11 @@
 # Rpi Firmware
 
-
 Investigating Nerves on a RPI3. No USB 
+
+TODO 
+  * Read temp and present - 1. log it with scheduler
+    * Make tests
+      * mock for UI dev, and unit test
 
 
 ```sh
@@ -31,6 +35,7 @@ More links
   * [QT kiosk](https://elixirforum.com/t/usb-touch-screen-with-nerves-kiosk/29996)
   * [DS18B20](https://github.com/developerworks/hello_celsius_sensor/blob/master/lib/hello_celsius.ex)
   * [Birdhouse](https://dasky.xyz/posts/2020/08/12/an-iot-birdhouse-with-elixir-nerves-phoenix-liveview-components/)
+  * [Debugging remote](https://mfeckie.github.io/Remote-Profiling-Elixir-Over-SSH/)
 
 
 
