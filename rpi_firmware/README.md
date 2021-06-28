@@ -40,6 +40,7 @@ More links
   * [Pattern matching binary](https://functional.christmas/2020/23)
   * [.. more](https://dev.to/mnishiguchi/iot-development-using-rapberry-pi-and-elixir-iij)
   * [Nerves Livebook](https://github.com/fhunleth/nerves_livebook)
+  * [Scheduler](https://elixircasts.io/recurring-work-with-genserver)
 
 
 Testing links

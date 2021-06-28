@@ -1,5 +1,3 @@
-# https://github.com/supersimple/drizzle/blob/master/lib/drizzle/scheduler.ex
-
 defmodule RpiFirmware.Cputemp do
   use GenServer
   require Logger
@@ -35,10 +33,9 @@ defmodule RpiFirmware.Cputemp do
 
   end
 
-  def read_temp() do
+  defp read_temp() do
 
     {temp, _} = System.cmd("vcgencmd", ["measure_temp"])
-    Logger.info("read_temp: #{temp}")
 
     {:ok, temp}
   end
