@@ -18,9 +18,12 @@ defmodule RpiFirmware.Cputemp do
 
   def handle_info(:work, state) do
 
-    read_temp()
+    {:ok, temp} = read_temp()
 
-    # todo fire phoenix event
+    Logger.info("handle_info #{temp}")
+
+    # Fire phoenix event
+    Phoenix.PubSub.broadcast(RpiUi.PubSub, "cputemp", temp)
 
     schedule_work()
     {:noreply, state}
@@ -35,7 +38,8 @@ defmodule RpiFirmware.Cputemp do
   def read_temp() do
 
     {temp, _} = System.cmd("vcgencmd", ["measure_temp"])
-    Logger.info(temp)
+    Logger.info("read_temp: #{temp}")
 
+    {:ok, temp}
   end
 end
