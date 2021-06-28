@@ -1,19 +1,37 @@
+# https://github.com/supersimple/drizzle/blob/master/lib/drizzle/scheduler.ex
+
 defmodule RpiFirmware.Cputemp do
   use GenServer
   require Logger
 
-  def loop_forever() do
+  def init(state) do
+
+    Logger.info("Starting scheduler")
+
+    schedule_work()
+    {:ok, state}
+  end
+
+  defp schedule_work() do
+
+    Process.send_after(self(), :work, 2000)
+
+  end
+
+  def handle_info(:work, state) do
+
     read_temp()
 
-    # TODO add mock and HAL
-    Process.sleep(1000)
-    loop_forever()
+    # todo fire phoenix event
+
+    schedule_work()
+    {:noreply, state}
   end
 
   def read_temp() do
 
-    l = System.cmd("vcgencmd", ["measure_temp"])
-    Logger.info(l)
+    {temp, _} = System.cmd("vcgencmd", ["measure_temp"])
+    Logger.info(temp)
 
   end
 end

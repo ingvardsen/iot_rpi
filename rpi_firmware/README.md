@@ -6,6 +6,8 @@ TODO
   * Read temp and present - 1. log it with scheduler
     * Make tests
       * mock for UI dev, and unit test
+  * Create empty ENV file and push
+    * Add gitignore on local version
 
 
 ```sh
