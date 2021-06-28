@@ -34,6 +34,7 @@ defmodule RpiFirmware.Application do
       # Children for all targets except host
       # Starts a worker by calling: RpiFirmware.Worker.start_link(arg)
       # {RpiFirmware.Worker, arg},
+      { RpiFirmware.Cputemp, %{} }
     ]
   end
 
