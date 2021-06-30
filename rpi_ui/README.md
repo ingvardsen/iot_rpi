@@ -1,5 +1,15 @@
 # RpiUi
 
+```sh
+# Start local
+iex -S mix phx.server
+
+# Fire event
+Phoenix.PubSub.broadcast(RpiUi.PubSub, "cputemp",  "200")
+```
+
+
+
 To start your Phoenix server:
 
   * Install dependencies with `mix deps.get`

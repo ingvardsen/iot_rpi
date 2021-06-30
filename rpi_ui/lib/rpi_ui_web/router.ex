@@ -18,6 +18,7 @@ defmodule RpiUiWeb.Router do
     pipe_through :browser
 
     live "/", PageLive, :index
+    live "/temp", TempLive
   end
 
   # Other scopes may use custom stacks.
