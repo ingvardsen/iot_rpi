@@ -34,6 +34,7 @@ defmodule RpiUiWeb.TempLive do
 
   end
 
+  @impl true
   def handle_info(temp, socket) do
 
     Logger.info("Handle info: #{temp}")
