@@ -41,6 +41,7 @@ More links
   * [.. more](https://dev.to/mnishiguchi/iot-development-using-rapberry-pi-and-elixir-iij)
   * [Nerves Livebook](https://github.com/fhunleth/nerves_livebook)
   * [Scheduler](https://elixircasts.io/recurring-work-with-genserver)
+  * [PiCam and Cowboy, remote iex](https://github.com/pdgonzalez872/nerves_rpi3_wifi_picam)
 
 
 Testing links

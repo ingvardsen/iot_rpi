@@ -33,6 +33,8 @@ defmodule RpiFirmware.Cputemp do
 
   end
 
+  # Abstract away, and add volts, underpower state ...
+  # https://www.raspberrypi.org/documentation/raspbian/applications/vcgencmd.md
   defp read_temp() do
 
     {temp, _} = System.cmd("vcgencmd", ["measure_temp"])
