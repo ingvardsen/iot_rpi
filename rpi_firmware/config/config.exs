@@ -48,4 +48,6 @@ else
   import_config "target.exs"
 end
 
+config :rpi_firmware, cpu_condition_adapter: LiveCpuCondition
+
 config :nerves_leds, names: [green: "led0", red: "led1"]
