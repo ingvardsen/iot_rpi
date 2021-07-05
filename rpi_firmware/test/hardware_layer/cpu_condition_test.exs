@@ -5,11 +5,11 @@ defmodule CpuConditionTest do
 
   setup :verify_on_exit!
 
-  test "cpu tempreture/0 returns a text string" do
+  test "cpu tempreture/0 returns result" do
     CpuConditionMock
-    |> expect(:cpu_temp fn -> "20" end)
+    |> expect(:cpu_temp, fn -> {:ok, "20"} end)
 
-    assert "20" = CpuCondition.cpu_temp()
+    assert CpuCondition.cpu_temp() == "20"
 
   end
 end

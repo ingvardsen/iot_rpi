@@ -1,2 +1,1 @@
-
-Mox.defmock(CpuConditionBehaviourMock, for: CpuConditionBehaviour)
+Mox.defmock(CpuConditionMock, for: CpuConditionBehaviour)

@@ -1,1 +1,1 @@
-config :rpi_firmware, cpu_condition: CpuConditionMock
+config :hardware_layer, cpu_condition: CpuConditionMock
