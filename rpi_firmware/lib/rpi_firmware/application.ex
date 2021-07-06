@@ -38,10 +38,6 @@ defmodule RpiFirmware.Application do
     ]
   end
 
-  # Adapter for hardware abstration
-  def cpucondition_adapter() do
-    Application.get_env(:hardware_layer, :cpu_condition, CpuConditionLive)
-  end
 
   def target() do
     Application.get_env(:rpi_firmware, :target)

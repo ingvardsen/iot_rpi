@@ -7,7 +7,6 @@ defmodule RpiFirmware.MixProject do
 
   def project do
     [
-      elixirc_paths: elixirc_paths(Mix.env()),
       app: @app,
       version: @version,
       elixir: "~> 1.9",
@@ -19,10 +18,6 @@ defmodule RpiFirmware.MixProject do
       preferred_cli_target: [run: :host, test: :host]
     ]
   end
-
-  # Specifies which paths to compile per environment.
-  defp elixirc_paths(:test), do: ["lib", "test/support"]
-  defp elixirc_paths(_), do: ["lib"]
 
   # Run "mix help compile.app" to learn about applications.
   def application do
