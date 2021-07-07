@@ -1,6 +1,6 @@
 import Config
 
-config :hardware_layer, cpu_condition: CpuConditionLive
+config :rpi_firmware, cpu_condition: CpuConditionLive
 
 # Use shoehorn to start the main application. See the shoehorn
 # docs for separating out critical OTP applications such as those

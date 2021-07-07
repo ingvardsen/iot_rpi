@@ -11,21 +11,40 @@ defmodule CpuConditionBehaviour do
   @callback cpu_temp() :: {:ok, String}
 end
 
-#defmodule CpuCondition do
-#  IO.puts("Env: #{Application.get_env(:hardware_layer, :cpu_condition)}")
-#  defdelegate cpu_temp, to: Application.get_env(:hardware_layer, :cpu_condition)
-#end
+
+defmodule CpuCondition do
+  defdelegate cpu_temp, to: RpiFirmware.Application.cpu_condition_adapter()
+end
+
+
+defmodule CpuConditionImplementation do
+
+  def cpu_temp_degrees() do
+
+    {:ok, temp} = CpuCondition.cpu_temp()
+    IO.puts("Temp 1 -- #{temp}")
+
+    temp
+    |> String.to_charlist()
+    |> IO.inspect
+    |> Enum.filter( fn a -> a > 47 && a < 58 end)
+    |> List.to_string
+    |> String.to_integer
+    |> IO.inspect
+
+  end
+end
+
 
 defmodule CpuConditionLive do
   @behaviour CpuConditionBehaviour
 
-  def cpu_temp(:data) do
-    cpu_temp()
-  end
+  require Logger
 
   def cpu_temp() do
-    # {temp, _} = System.cmd("vcgencmd", ["measure_temp"])
-    {:ok, "temp"}
-  end
 
+    {temp, _} = System.cmd("vcgencmd", ["measure_temp"])
+    IO.puts("Temp 2 -- #{temp}")
+    {:ok, temp}
+  end
 end

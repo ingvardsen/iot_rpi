@@ -1,15 +1,16 @@
 defmodule CpuConditionTest do
 
   use ExUnit.Case, async: true
+
   import Mox
 
   setup :verify_on_exit!
 
   test "cpu temp returns a number" do
     CpuConditionMock
-    |> expect(:cpu_temp, fn -> {:ok, "2000"} end)
+    |> expect(:cpu_temp, fn -> {:ok, "somechars 20c"} end)
 
-    assert {:ok, "20"} == CpuConditionLive.cpu_temp(:data)
+    assert {:ok, "20"} == CpuConditionImplementation.cpu_temp_degrees()
   end
 
 end

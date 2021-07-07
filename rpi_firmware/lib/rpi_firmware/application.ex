@@ -38,8 +38,12 @@ defmodule RpiFirmware.Application do
     ]
   end
 
-
   def target() do
     Application.get_env(:rpi_firmware, :target)
   end
+
+  def cpu_condition_adapter do
+    Application.get_env(:rpi_firmware, :cpu_condition, CpuConditionLive)
+  end
+
 end
