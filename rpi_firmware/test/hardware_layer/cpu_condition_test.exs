@@ -8,9 +8,9 @@ defmodule CpuConditionTest do
 
   test "cpu temp returns a number" do
     CpuConditionMock
-    |> expect(:cpu_temp, fn -> {:ok, "somechars 20c"} end)
+    |> expect(:cpu_temp, fn -> {:ok, "temp=46.7'C"} end)
 
-    assert {:ok, "20"} == CpuConditionImplementation.cpu_temp_degrees()
+    assert {:ok, "46.7"} == CpuConditionImplementation.cpu_temp_degrees()
   end
 
 end

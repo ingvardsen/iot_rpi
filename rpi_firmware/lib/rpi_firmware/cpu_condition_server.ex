@@ -1,4 +1,4 @@
-defmodule RpiFirmware.Cputemp do
+defmodule RpiFirmware.CpuCondition do
   use GenServer
   require Logger
 
@@ -16,9 +16,9 @@ defmodule RpiFirmware.Cputemp do
 
   def handle_info(:work, state) do
 
-    {:ok, temp} = read_temp()
+    {:ok, temp} = CpuConditionImplementation.cpu_temp_degrees()
 
-    Logger.info("handle_info #{temp}")
+    Logger.info("server handle_info #{temp}")
 
     # Fire phoenix event
     Phoenix.PubSub.broadcast(RpiUi.PubSub, "cputemp", temp)
@@ -33,12 +33,4 @@ defmodule RpiFirmware.Cputemp do
 
   end
 
-  # Abstract away, and add volts, underpower state ...
-  # https://www.raspberrypi.org/documentation/raspbian/applications/vcgencmd.md
-  defp read_temp() do
-
-    {temp, _} = System.cmd("vcgencmd", ["measure_temp"])
-
-    {:ok, temp}
-  end
 end

@@ -5,7 +5,7 @@
 # https://dev.to/nickforall/debugging-and-mocking-third-party-services-in-elixir-with-mox-3gfb
 # Test objects https://blog.lelonek.me/how-to-mock-httpoison-in-elixir-7947917a9266
 # Hal in eink  https://underjord.io/an-eink-display-with-nerves-elixir.html
-
+# https://www.raspberrypi.org/documentation/raspbian/applications/vcgencmd.md
 
 defmodule CpuConditionBehaviour do
   @callback cpu_temp() :: {:ok, String}
@@ -27,7 +27,7 @@ defmodule CpuConditionImplementation do
 
     parsed = temp
     |> String.to_charlist()
-    |> Enum.filter( fn a -> a > 47 && a < 58 end )
+    |> Enum.filter( fn a -> (a > 47 && a < 58) || a == 46 end )
     |> List.to_string
 
     Logger.info("temp: #{temp}, parsed: #{parsed}")
@@ -41,14 +41,11 @@ end
 defmodule CpuConditionLive do
   @behaviour CpuConditionBehaviour
 
-  require Logger
-
   def cpu_temp() do
 
     {temp, _} = System.cmd("vcgencmd", ["measure_temp"])
 
-    Logger.info("measure_temp, #{temp}")
-
     {:ok, temp}
+
   end
 end
