@@ -19,18 +19,20 @@ end
 
 defmodule CpuConditionImplementation do
 
+  require Logger
+
   def cpu_temp_degrees() do
 
     {:ok, temp} = CpuCondition.cpu_temp()
-    IO.puts("Temp 1 -- #{temp}")
 
-    temp
+    parsed = temp
     |> String.to_charlist()
-    |> IO.inspect
-    |> Enum.filter( fn a -> a > 47 && a < 58 end)
+    |> Enum.filter( fn a -> a > 47 && a < 58 end )
     |> List.to_string
-    |> String.to_integer
-    |> IO.inspect
+
+    Logger.info("temp: #{temp}, parsed: #{parsed}")
+
+    {:ok, parsed}
 
   end
 end
@@ -44,7 +46,9 @@ defmodule CpuConditionLive do
   def cpu_temp() do
 
     {temp, _} = System.cmd("vcgencmd", ["measure_temp"])
-    IO.puts("Temp 2 -- #{temp}")
+
+    Logger.info("measure_temp, #{temp}")
+
     {:ok, temp}
   end
 end
