@@ -18,6 +18,8 @@ config :rpi_ui, RpiUiWeb.Endpoint,
   load_from_system_env: false,
   # Start the server since we're running in a release instead of through `mix`
   server: true,
+  # Cookie secret
+  secret_key_base: "WFzVZOVRiUo1Vz++K3C7gMJ8lGTUMEwF8sCJi1KOjZqPnQlFTN1yFFmkRgmBK1PV",
   url: [host: "nerves.local", port: 80]
 
 

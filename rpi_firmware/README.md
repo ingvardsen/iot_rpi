@@ -33,6 +33,7 @@ Links
 
 
 More links
+  * [rpi vcgencmd](https://www.raspberrypi.org/documentation/raspbian/applications/vcgencmd.md)
   * [i2c](https://blog.mnishiguchi.com/iot-development-using-raspberry-pi-elixir-and-nerves)
   * [QT kiosk](https://elixirforum.com/t/usb-touch-screen-with-nerves-kiosk/29996)
   * [DS18B20](https://github.com/developerworks/hello_celsius_sensor/blob/master/lib/hello_celsius.ex)
@@ -42,10 +43,11 @@ More links
   * [Nerves Livebook](https://github.com/fhunleth/nerves_livebook)
   * [Scheduler](https://elixircasts.io/recurring-work-with-genserver)
   * [PiCam and Cowboy, remote iex](https://github.com/pdgonzalez872/nerves_rpi3_wifi_picam)
-
+  * [PigPio](https://github.com/tokafish/pigpiox)
+  
 
 Testing links
-  * [Mocks, Jose Valim](http://blog.plataformatec.com.br/2015/10/mocks-and-explicit-contracts/)
+  * [Hal in eink](https://underjord.io/an-eink-display-with-nerves-elixir.html)
 
 
 Featured project links

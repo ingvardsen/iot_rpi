@@ -1,11 +1,3 @@
-# https://medium.com/flatiron-labs/elixir-test-mocking-with-mox-b825a955143f
-# https://pre.hn/elixir-tests-with-mox-patterns/
-# https://elixirschool.com/en/lessons/libraries/mox/
-
-# https://dev.to/nickforall/debugging-and-mocking-third-party-services-in-elixir-with-mox-3gfb
-# Test objects https://blog.lelonek.me/how-to-mock-httpoison-in-elixir-7947917a9266
-# Hal in eink  https://underjord.io/an-eink-display-with-nerves-elixir.html
-# https://www.raspberrypi.org/documentation/raspbian/applications/vcgencmd.md
 
 defmodule CpuConditionBehaviour do
   @callback cpu_temp() :: {:ok, String}
