@@ -56,6 +56,12 @@ Featured project links
   * [Ikea, UI, Pigpio](https://tomhaines.uk/blog/simple-iot-with-elixir/)
 
 
+Video links
+  * [Live video streaming](https://blog.swmansion.com/live-video-streaming-in-elixir-made-simple-with-membrane-fc5b2083982d)
+  * [RPI Camera, raspivid](https://blog.robertelder.org/commands-raspberry-pi-camera/)
+
+
+
 ## Targets -- initiating project
 
 Nerves applications produce images for hardware targets based on the
