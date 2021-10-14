@@ -1,4 +1,7 @@
 # Rpi Firmware with Phoenix
 
-Added as a Nerves wrapper project, read more [here](https://hexdocs.pm/nerves/user-interfaces.html)
+### Mono Repos
 
+An umbrella project consisting of two projects - UI and firmware (back-end).
+
+More info in [./rpi_firmware/README.md](./rpi_firmware/README.md) and [./rpi_ui/README.md](./rpi_ui/README.md)
